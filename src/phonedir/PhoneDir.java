@@ -60,7 +60,7 @@ public class PhoneDir {
 
                     if (phoneContacts.isEmpty()) {
                         phoneContacts.add(new Contact(firstName, lastName, number));
-                    } else {
+                    }/*end of if*/ else {
                         int count = 0;
 
                         for (int i = 0; i < phoneContacts.size(); i++) {
@@ -68,8 +68,7 @@ public class PhoneDir {
                             System.out.println("Size: " + phoneContacts.size());
                             ++count;
                             System.out.println("Count: " + count);
-                            
-                            
+
                             if (lastName.compareTo("A") == phoneContacts.get(i).getLastName().compareTo("A")) {
                                 //notes
                                 System.out.println("Same letter == ");
@@ -79,49 +78,33 @@ public class PhoneDir {
                                 //notes
                                 phoneContacts.add(i, new Contact(firstName, lastName, number));
                                 break;
-                            } else if (lastName.compareTo("A") < phoneContacts.get(i).getLastName().compareTo("A")) {
+                            }/*end of if*/ else if (lastName.compareTo("A") < phoneContacts.get(i).getLastName().compareTo("A")) {
                                 System.out.println("else if");
                                 System.out.println("List numbers: " + phoneContacts.get(i).getLastName().compareTo("A") + " Letter: " + phoneContacts.get(i).getLastName());
                                 System.out.println("New number: " + lastName.compareTo("A") + " New letter: " + lastName);
                                 phoneContacts.add(i, new Contact(firstName, lastName, number));
                                 break;
 
-                            } else if (lastName.compareTo("A") < phoneContacts.get(i).getLastName().compareTo("A")) {
+                            }/*end of else if*/ else if (lastName.compareTo("A") < phoneContacts.get(i).getLastName().compareTo("A")) {
                                 System.out.println("else if");
                                 System.out.println("List numbers: " + phoneContacts.get(i).getLastName().compareTo("A") + " Letter: " + phoneContacts.get(i).getLastName());
                                 System.out.println("New number: " + lastName.compareTo("A") + " New letter: " + lastName);
                                 phoneContacts.add(i, new Contact(firstName, lastName, number));
                                 break;
-                            } else {
+                            }/*end of else if*/  else {
                                 System.out.println("else");
                                 if (phoneContacts.size() == count) {
                                     phoneContacts.add(new Contact(firstName, lastName, number));
                                     System.out.println("List numbers: " + phoneContacts.get(i).getLastName().compareTo("A") + " Letter: " + phoneContacts.get(i).getLastName());
                                     System.out.println("New number: " + lastName.compareTo("A") + " New letter: " + lastName);
                                     break;
-                                }
+                                }/*end of if*/ 
 
-                            }
+                            }/*end of else*/ 
 
-                            /*                            if (phoneContacts.get(i).getLastName().compareTo("A")
-                             > lastName.compareTo("A")) {
-                             System.out.println("if");
-                             phoneContacts.add(i, new Contact(firstName, lastName, number));
-                             System.out.println("My number was not is greater or equal");
-                             break;
-                             }  if (phoneContacts.get(i).getLastName().compareTo("A")
-                             < lastName.compareTo("A")) {
-                             System.out.println("else if");
-                             phoneContacts.add(i, new Contact(firstName, lastName, number));
-                             break;
+                        }//end of for loop
 
-                             } else {
-                             phoneContacts.add(i, new Contact(firstName, lastName, number));
-                             break;
-                             }*/
-                        }
-
-                    }
+                    }//end of else
 
                     break;
                 case "p":
